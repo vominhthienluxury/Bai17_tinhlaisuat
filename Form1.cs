@@ -20,14 +20,14 @@ namespace Bai17_tinhlaisuat
 
         private void TINH_Click(object sender, EventArgs e)
         {
-            // Xóa ListBox
+            // dùng xóa ListBox
             listBox1.Items.Clear();
 
-            // Để giá trị vào biến
+            
             double soTien = Convert.ToInt64(textTIEN.Text);
             int soNam = (int)Sonam.Value;
             double laiSuat = double.Parse(cbxlai.SelectedItem.ToString().Replace("%", "")) / 100;
-            // MessageBox.Show("Lai suat " + laiSuat);
+           
 
             for (int i = 1; i <= soNam; i++)
             {
@@ -41,12 +41,13 @@ namespace Bai17_tinhlaisuat
         {
             for (double i = 0.01; i <= 0.101; i += 0.001)
             {
-                // cbxLaiSuat.Items.Add(String.Format("{0:P2}.", i));
+               
                 cbxlai.Items.Add(String.Format("{0:P1}", Math.Round(i, 3)));
-                // cbxLaiSuat.Items.Add(Math.Round(i, 3));
+                
             }
             textTIEN.Text = "10000000";
             cbxlai.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }
+//vominhthien
